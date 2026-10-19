@@ -1,0 +1,52 @@
+:root {
+  --bg-dark-green: #1b4d3e;
+  --bg-light: #f8fafc;
+  --border-dark: #2a6352;
+  --text-light-main: #ffffff;
+  --text-light-muted: #a3c2b8;
+  --text-dark-main: #0f172a;
+  --accent-gold: #cca043;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Centers page content */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 768px) {
+  .columns {
+    display: flex;
+  }
+
+  .one {
+    flex: 1;
+  }
+
+  .two {
+    flex: 2;
+  }
+}
