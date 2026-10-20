@@ -32,3 +32,24 @@
 .main-nav li a:hover {
     color: var(--text-light-main);
 }
+
+@media only screen and (min-width: 992px) {
+    .main-nav button {
+        display: none;
+    }
+
+    .main-nav ul {
+        display: flex;
+        gap: 1.75rem;
+        margin: 0;
+    }
+
+    .main-nav li {
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .main-nav li a {
+        font-size: 0.88rem;
+    }
+}
