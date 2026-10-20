@@ -1,0 +1,9 @@
+.main-header {
+    background-color: var(--bg-dark-green);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 1.25rem 0;
+}
+
+.main-header .container {
+    position: relative;
+}

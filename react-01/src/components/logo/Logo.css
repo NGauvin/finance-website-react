@@ -1,0 +1,17 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-light-main);
+    text-decoration: none;
+}
+
+.logo .logo-square {
+    width: 14px;
+    height: 14px;
+    background-color: var(--accent-gold);
+    border-radius: 3px;
+}
