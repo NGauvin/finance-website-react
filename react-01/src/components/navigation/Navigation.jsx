@@ -1,16 +1,17 @@
 import "./Navigation.css";
+import {NavLink} from "react-router-dom";
 
 const Navigation = () => {
     return (
         <nav className="main-nav">
             <button aria-label="Toggle Navigation">&#9776;</button>
             <ul>
-                <li><a href="#">Finance Overview</a></li>
-                <li><a href="#">Time Value of Money</a></li>
-                <li><a href="#">Debt</a></li>
-                <li><a href="#">Equity</a></li>
-                <li><a href="#">Alternatives</a></li>
-                <li><a href="#">Applications</a></li>
+                <li><NavLink to="/overview">Finance Overview</NavLink></li>
+                <li><NavLink to="/tvm">Time Value of Money</NavLink></li>
+                <li><NavLink to="/debt">Debt</NavLink></li>
+                <li><NavLink to="/equity">Equity</NavLink></li>
+                <li><NavLink to="/alternatives">Alternatives</NavLink></li>
+                <li><NavLink to="/applications">Applications</NavLink></li>
             </ul>
         </nav>
     );

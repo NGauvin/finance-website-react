@@ -36,6 +36,17 @@ img {
   padding: 0 1.5rem;
 }
 
+/* Keep the footer at the bottom */
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  flex-grow: 1;
+}
+
 /* Larger Screens */
 @media only screen and (min-width: 768px) {
   .columns {

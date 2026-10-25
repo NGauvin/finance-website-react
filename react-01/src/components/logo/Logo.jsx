@@ -1,11 +1,12 @@
 import "./Logo.css";
+import {NavLink} from "react-router-dom";
 
 const Logo = () => {
     return (
-        <a href="#" className="logo">
+        <NavLink to="/" className="logo">
             <span className="logo-square"></span>
             The Art of Finance
-        </a>
+        </NavLink>
     );
 };
 

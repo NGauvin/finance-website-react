@@ -33,6 +33,14 @@
     color: var(--text-light-main);
 }
 
+.main-nav li a.active {
+    color: var(--text-light-main);
+}
+
+.main-nav li:last-child {
+    border-bottom: 0;
+}
+
 @media only screen and (min-width: 992px) {
     .main-nav button {
         display: none;
