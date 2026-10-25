@@ -6,6 +6,14 @@
   --text-light-muted: #a3c2b8;
   --text-dark-main: #0f172a;
   --accent-gold: #cca043;
+  --accent-gold-hover: #b88e34;
+  --bg-light-cta: #eff7f2;
+  --bg-card-light: #ffffff;
+  --text-dark-muted: #475569;
+  --accent-tag-bg: #e2f0d9;
+  --accent-tag-text: #2d6a4f;
+  --border-light: #e2e8f0;
+  --border-radius: 12px;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
 }
@@ -47,6 +55,58 @@ img {
   flex-grow: 1;
 }
 
+h1, h2 {
+  font-family: var(--font-heading);
+}
+
+.highlight-text {
+  color: var(--accent-gold);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #111827;
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-hover);
+}
+
+.btn-dark-green {
+  background-color: var(--bg-dark-green);
+  color: var(--text-light-main);
+}
+
+.btn-outline {
+  border: 1px solid var(--bg-dark-green);
+  color: var(--bg-dark-green);
+}
+
+/* Module page layout */
+.page-content {
+  max-width: 900px;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.content-block {
+  margin-bottom: 4.5rem;
+}
+
+.content-block p {
+  color: var(--text-dark-muted);
+}
+
 /* Larger Screens */
 @media only screen and (min-width: 768px) {
   .columns {
@@ -59,5 +119,9 @@ img {
 
   .two {
     flex: 2;
+  }
+
+  .content-block {
+    padding-left: 56px;
   }
 }

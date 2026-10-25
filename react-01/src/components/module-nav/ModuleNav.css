@@ -1,0 +1,30 @@
+.module-nav {
+    background-color: var(--bg-dark-green);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 2.5rem 0;
+}
+
+.module-nav .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.module-nav .prev-link {
+    color: var(--text-light-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.module-nav .prev-link:hover {
+    color: var(--text-light-main);
+}
+
+@media only screen and (min-width: 768px) {
+    .module-nav .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

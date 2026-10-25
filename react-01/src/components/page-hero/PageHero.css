@@ -1,0 +1,38 @@
+.page-hero {
+    background-color: var(--bg-dark-green);
+    color: var(--text-light-main);
+    padding: 2.5rem 0 3rem;
+}
+
+.page-hero .breadcrumbs {
+    color: var(--text-light-muted);
+    font-size: 0.82rem;
+    margin: 0 0 1.25rem;
+}
+
+.page-hero .breadcrumbs span {
+    color: var(--text-light-main);
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+}
+
+.page-hero .hero-text {
+    color: var(--text-light-muted);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .page-hero {
+        padding: 3.5rem 0;
+    }
+
+    .page-hero h1 {
+        font-size: 3.25rem;
+    }
+}
