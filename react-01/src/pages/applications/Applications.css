@@ -1,0 +1,178 @@
+#applications .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#applications .framework {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#applications .framework-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#applications .framework-content {
+    margin-bottom: 0;
+}
+
+#applications .framework-content h3 {
+    color: var(--text-dark-main);
+    font-size: 1.25rem;
+    margin: 0 0 1.25rem;
+}
+
+#applications .framework-content ol {
+    padding-left: 1.25rem;
+    margin: 0 0 2rem;
+}
+
+#applications .framework-content li {
+    color: var(--text-dark-main);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+#applications .key-tools {
+    background-color: #f4f8f5;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+}
+
+#applications .key-tools span {
+    display: block;
+    color: var(--bg-dark-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+#applications .key-tools p {
+    margin: 0;
+}
+
+#applications .data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#applications .bar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#applications .summary-card {
+    background-color: var(--bg-dark-green);
+    border-radius: 8px;
+    padding: 1.75rem;
+}
+
+#applications .summary-card .box-title {
+    color: #a3b18a;
+}
+
+#applications .summary-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#applications .summary-card .stat-label {
+    color: #d8f3dc;
+}
+
+#applications .summary-card .stat-value {
+    color: #ffffff;
+}
+
+#applications .summary-card .stat-item:last-child .stat-value {
+    color: #f87171;
+}
+
+#applications .summary-card p {
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#applications .journey-complete {
+    background-color: #f0f7f4;
+    border-radius: 12px;
+    padding: 3rem 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#applications .star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--bg-dark-green);
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#applications .journey-complete h2 {
+    color: var(--text-dark-main);
+    font-size: 1.75rem;
+    margin: 0 0 1rem;
+}
+
+#applications .journey-complete p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+}
+
+#applications .journey-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #applications .summary-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #applications .framework {
+        grid-template-columns: 260px 1fr;
+    }
+
+    #applications .data-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #applications .summary-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #applications .journey-complete {
+        margin-left: 56px;
+        padding: 3.5rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #applications .summary-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

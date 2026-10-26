@@ -1,0 +1,14 @@
+.stat-item .stat-label {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.stat-item .stat-value {
+    display: block;
+    color: var(--text-dark-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}

@@ -1,0 +1,36 @@
+.valuation-bar .bar-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-dark-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.valuation-bar .bar-formula {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.valuation-bar .bar-track {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e5e7eb;
+    overflow: hidden;
+}
+
+.valuation-bar .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--bg-dark-green);
+}
+
+.valuation-bar .fill-56 {
+    width: 56%;
+}
+
+.valuation-bar .fill-100 {
+    width: 100%;
+}

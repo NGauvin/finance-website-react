@@ -1,0 +1,12 @@
+.correlation-row td {
+    color: var(--text-dark-muted);
+    text-align: center;
+}
+
+.correlation-row td:first-child {
+    text-align: left;
+}
+
+.correlation-row strong {
+    color: var(--text-dark-main);
+}

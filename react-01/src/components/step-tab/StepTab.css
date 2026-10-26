@@ -1,0 +1,17 @@
+.step-tab {
+    background: none;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    color: var(--text-dark-main);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.step-tab.active {
+    background-color: var(--bg-dark-green);
+    border-color: var(--bg-dark-green);
+    color: var(--text-light-main);
+}

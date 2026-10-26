@@ -1,0 +1,86 @@
+.asset-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--bg-card-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.asset-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.asset-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.asset-card .asset-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.asset-card .asset-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem 1rem;
+}
+
+.asset-card h3 {
+    color: var(--text-dark-main);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.asset-card .asset-risk {
+    color: var(--text-dark-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.asset-card .asset-category {
+    color: var(--text-dark-muted);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.asset-card p {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 1.5rem;
+}
+
+.asset-card .asset-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.asset-card .asset-label {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.asset-card .asset-value {
+    color: var(--text-dark-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+}

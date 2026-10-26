@@ -1,0 +1,19 @@
+.data-point {
+    background-color: #f9fafb;
+    border: 1px solid #f3f4f6;
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+}
+
+.data-point .data-label {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.data-point .data-value {
+    color: var(--text-dark-main);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
