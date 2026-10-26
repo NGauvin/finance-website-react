@@ -1,0 +1,22 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.input-group label {
+    color: var(--text-dark-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    color: var(--text-dark-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}

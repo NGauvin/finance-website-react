@@ -1,0 +1,7 @@
+.comparison-row td {
+    color: var(--text-dark-muted);
+}
+
+.comparison-row strong {
+    color: var(--text-dark-main);
+}

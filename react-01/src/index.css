@@ -108,6 +108,111 @@ h1, h2 {
   color: var(--text-dark-muted);
 }
 
+/* Shared pieces used on several module pages */
+.card {
+  background-color: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.box-title {
+  display: block;
+  color: var(--accent-tag-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.formula-box {
+  background-color: var(--bg-light-cta);
+  border: 1px solid #d4e8db;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark-main);
+  text-align: center;
+  overflow-x: auto;
+}
+
+.content-block .formula-note {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.5rem 0 0;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-card-light);
+  border: 1px solid var(--border-light);
+  font-size: 0.72rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.6rem 0.35rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.data-table th {
+  background-color: var(--bg-light-cta);
+  font-size: 0.68rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Calculators */
+.calc-title {
+  display: block;
+  color: var(--text-dark-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.25rem;
+}
+
+.calc-inputs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-card {
+  background-color: var(--bg-dark-green);
+  color: var(--text-light-main);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+.result-label {
+  color: var(--text-light-muted);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.result-value {
+  color: var(--accent-gold);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 /* Larger Screens */
 @media only screen and (min-width: 768px) {
   .columns {
@@ -124,5 +229,18 @@ h1, h2 {
 
   .content-block {
     padding-left: 56px;
+  }
+
+  .data-table {
+    font-size: 0.88rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.85rem 1rem;
+  }
+
+  .data-table th {
+    font-size: 0.78rem;
   }
 }

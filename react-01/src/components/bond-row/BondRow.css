@@ -1,0 +1,35 @@
+.bond-row .risk-badge {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    border-radius: 12px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.bond-row .very-low {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.bond-row .low {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.bond-row .moderate {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.bond-row .high {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+@media only screen and (min-width: 768px) {
+    .bond-row .risk-badge {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}

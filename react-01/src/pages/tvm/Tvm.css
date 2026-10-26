@@ -1,0 +1,95 @@
+#tvm .card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin: 1.75rem 0 2rem;
+}
+
+#tvm .chart-box {
+    background-color: var(--bg-light-cta);
+    border: 1px solid #d4e8db;
+    border-radius: var(--border-radius);
+    padding: 1.5rem 1rem;
+}
+
+#tvm .chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-tag-text);
+}
+
+#tvm .formula-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.5rem;
+}
+
+#tvm .npv-title {
+    color: var(--text-dark-main);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+}
+
+#tvm .calc-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+#tvm .calc-tab {
+    background: none;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    color: var(--text-dark-muted);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+#tvm .calc-tab.active {
+    background-color: var(--bg-dark-green);
+    color: var(--text-light-main);
+}
+
+#tvm .result-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--border-dark);
+    color: var(--text-light-muted);
+    font-size: 0.78rem;
+}
+
+#tvm .calc-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #tvm .chart-box {
+        padding: 1.75rem;
+    }
+
+    #tvm .formula-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #tvm .calc-inputs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #tvm .calc-timeline {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

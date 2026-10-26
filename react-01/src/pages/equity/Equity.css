@@ -1,0 +1,39 @@
+#equity .stack-box {
+    background-color: #f1f6f3;
+    border: 1px solid #d4e8db;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+#equity .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#equity .calc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.5rem;
+}
+
+#equity .calc-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+#equity .calc-grid .result-card {
+    margin-top: auto;
+}
+
+#equity .calc-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #equity .calc-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,24 @@
+.timeline-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.timeline-node .node-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-tag-text);
+}
+
+.timeline-node .node-year {
+    color: var(--text-dark-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.timeline-node .node-value {
+    color: var(--text-dark-muted);
+    font-size: 0.72rem;
+}
