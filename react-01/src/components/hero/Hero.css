@@ -1,0 +1,74 @@
+.home-hero {
+    background-color: var(--bg-dark-green);
+    color: var(--text-light-main);
+    padding: 3rem 0;
+}
+
+.home-hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.home-hero h1 {
+    font-size: 2.75rem;
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+}
+
+.home-hero .hero-content p {
+    color: var(--text-light-muted);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 0 2rem;
+}
+
+.home-hero .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.home-hero .path-card {
+    background-color: var(--bg-card-green);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--border-radius);
+    padding: 1.75rem;
+}
+
+.home-hero .path-card h3 {
+    color: var(--text-light-muted);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin: 0 0 1.25rem;
+}
+
+.home-hero .path-card ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .home-hero {
+        padding: 4.5rem 0 3.5rem;
+    }
+
+    .home-hero .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3.5rem;
+    }
+
+    .home-hero .hero-content {
+        flex: 1.2;
+    }
+
+    .home-hero .path-card {
+        flex: 0.8;
+    }
+
+    .home-hero h1 {
+        font-size: 3.75rem;
+    }
+}

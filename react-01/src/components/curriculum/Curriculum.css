@@ -1,0 +1,58 @@
+.curriculum {
+    padding: 4rem 0;
+}
+
+.curriculum .curriculum-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.curriculum .section-badge {
+    display: block;
+    color: var(--accent-tag-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.curriculum h2 {
+    color: var(--text-dark-main);
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+}
+
+.curriculum .curriculum-header p {
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.curriculum .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.curriculum .timeline-line {
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background-color: #cbd5e1;
+}
+
+@media only screen and (min-width: 768px) {
+    .curriculum {
+        padding: 5rem 0;
+    }
+
+    .curriculum h2 {
+        font-size: 2.5rem;
+    }
+
+    .curriculum .timeline-line {
+        left: 24px;
+    }
+}

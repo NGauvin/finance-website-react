@@ -1,0 +1,19 @@
+.info-card {
+    background-color: var(--bg-card-light);
+    border: 1px solid var(--border-light);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+}
+
+.info-card h4 {
+    color: var(--text-dark-main);
+    font-size: 0.95rem;
+    margin: 0 0 0.25rem;
+}
+
+.info-card p {
+    color: var(--text-dark-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}

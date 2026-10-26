@@ -1,0 +1,22 @@
+.call-to-action {
+    background-color: var(--bg-light-cta);
+    border-top: 1px solid var(--border-light);
+    padding: 4.5rem 0;
+    text-align: center;
+}
+
+.call-to-action .container {
+    max-width: 580px;
+}
+
+.call-to-action h2 {
+    color: var(--text-dark-main);
+    font-size: 2.25rem;
+    margin: 0 0 0.75rem;
+}
+
+.call-to-action p {
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+    margin: 0 0 1.75rem;
+}

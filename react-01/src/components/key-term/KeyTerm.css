@@ -1,0 +1,40 @@
+.key-term {
+    background-color: var(--bg-card-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.key-term summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    color: var(--text-dark-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.key-term summary::-webkit-details-marker {
+    display: none;
+}
+
+.key-term summary::after {
+    content: "+";
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.key-term[open] summary::after {
+    content: "−";
+}
+
+.key-term p {
+    color: var(--text-dark-muted);
+    font-size: 0.88rem;
+    margin: 0;
+    padding: 0 1.25rem 1rem;
+}

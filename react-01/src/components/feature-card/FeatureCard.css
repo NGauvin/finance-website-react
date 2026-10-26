@@ -1,0 +1,25 @@
+.feature-card {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+}
+
+.feature-card .feature-bar {
+    flex-shrink: 0;
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--accent-gold);
+}
+
+.feature-card h3 {
+    color: var(--text-light-main);
+    font-size: 0.95rem;
+    margin: 0 0 0.25rem;
+}
+
+.feature-card p {
+    color: var(--text-light-muted);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin: 0;
+}

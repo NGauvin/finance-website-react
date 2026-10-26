@@ -1,0 +1,71 @@
+#overview .card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin: 1.75rem 0 2rem;
+}
+
+#overview .flow-chart {
+    background-color: var(--bg-light-cta);
+    border: 1px solid #d4e8db;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+#overview .flow-title {
+    display: block;
+    color: var(--accent-tag-text);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+#overview .flow-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#overview .flow-steps .flow-step {
+    width: 100%;
+}
+
+#overview .flow-arrow {
+    color: var(--accent-tag-text);
+    font-weight: 700;
+    transform: rotate(90deg);
+}
+
+#overview .domain-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+#overview .term-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #overview .flow-steps {
+        flex-direction: row;
+    }
+
+    #overview .flow-steps .flow-step {
+        width: auto;
+    }
+
+    #overview .flow-arrow {
+        transform: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #overview .domain-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
