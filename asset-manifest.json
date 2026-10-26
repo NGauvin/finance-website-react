@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/finance-website-react/static/css/main.133c1593.css",
-    "main.js": "/finance-website-react/static/js/main.4d19aca6.js",
+    "main.css": "/finance-website-react/static/css/main.d371f956.css",
+    "main.js": "/finance-website-react/static/js/main.ac598d89.js",
+    "static/media/digital-assets.jpg": "/finance-website-react/static/media/digital-assets.aba1f28fc1c6f687c67b.jpg",
+    "static/media/private-credit.jpg": "/finance-website-react/static/media/private-credit.381eef6702e5a4ae74f0.jpg",
+    "static/media/real-estate.jpg": "/finance-website-react/static/media/real-estate.86b83594f274244ee6e2.jpg",
+    "static/media/collectibles-art.jpg": "/finance-website-react/static/media/collectibles-art.f66e45ad98e1b3440256.jpg",
+    "static/media/commodities.jpg": "/finance-website-react/static/media/commodities.fb8449caa2270c9a2efd.jpg",
+    "static/media/infrastructure.jpg": "/finance-website-react/static/media/infrastructure.2fd52cdca121e7e8b9a6.jpg",
+    "static/media/hedge-funds.jpg": "/finance-website-react/static/media/hedge-funds.b619f993b1a236dd9b02.jpg",
+    "static/media/private-equity.jpg": "/finance-website-react/static/media/private-equity.324698b462355edeb14b.jpg",
     "index.html": "/finance-website-react/index.html",
-    "main.133c1593.css.map": "/finance-website-react/static/css/main.133c1593.css.map",
-    "main.4d19aca6.js.map": "/finance-website-react/static/js/main.4d19aca6.js.map"
+    "main.d371f956.css.map": "/finance-website-react/static/css/main.d371f956.css.map",
+    "main.ac598d89.js.map": "/finance-website-react/static/js/main.ac598d89.js.map"
   },
   "entrypoints": [
-    "static/css/main.133c1593.css",
-    "static/js/main.4d19aca6.js"
+    "static/css/main.d371f956.css",
+    "static/js/main.ac598d89.js"
   ]
 }
