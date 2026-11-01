@@ -41,12 +41,17 @@
     border-bottom: 0;
 }
 
+.main-nav .hide-small {
+    display: none;
+}
+
 @media only screen and (min-width: 992px) {
     .main-nav button {
         display: none;
     }
 
-    .main-nav ul {
+    .main-nav ul,
+    .main-nav .hide-small {
         display: flex;
         gap: 1.75rem;
         margin: 0;
