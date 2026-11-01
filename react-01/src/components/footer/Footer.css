@@ -64,4 +64,12 @@
         justify-content: space-between;
         align-items: flex-start;
     }
+
+    .main-footer .footer-brand p {
+        max-width: 260px;
+    }
+
+    .main-footer .footer-links {
+        gap: 1.25rem;
+    }
 }

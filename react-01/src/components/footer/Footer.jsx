@@ -1,6 +1,7 @@
 import "./Footer.css";
 import Logo from "../logo/Logo";
 import {NavLink} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
 const Footer = () => {
     return (
@@ -18,6 +19,7 @@ const Footer = () => {
                         <NavLink to="/equity">Equity</NavLink>
                         <NavLink to="/alternatives">Alternatives</NavLink>
                         <NavLink to="/applications">Applications</NavLink>
+                        <HashLink to="/#contact">Contact</HashLink>
                     </div>
                 </div>
                 <div className="footer-bottom">
