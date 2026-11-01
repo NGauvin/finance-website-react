@@ -11,6 +11,7 @@ import PageHero from "../../components/page-hero/PageHero";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import CorrelationRow from "../../components/correlation-row/CorrelationRow";
 import AssetCard from "../../components/asset-card/AssetCard";
+import Slideshow from "../../components/slideshow/Slideshow";
 import StatItem from "../../components/stat-item/StatItem";
 import ModuleNav from "../../components/module-nav/ModuleNav";
 
@@ -63,6 +64,9 @@ const Alternatives = () => {
 
                 <section className="content-block">
                     <SectionTitle number="2" title="Alternative Asset Classes" />
+                    <p>Click through the eight asset classes, then read about each one in the cards below.</p>
+
+                    <Slideshow />
 
                     <div className="asset-grid">
                         <AssetCard
