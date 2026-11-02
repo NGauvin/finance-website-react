@@ -1,9 +1,25 @@
 import "./AssetCard.css";
+import {useState} from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const AssetCard = (props) => {
+    const [open, setOpen] = useState(false);
+
+    const openLightbox = () => {
+        setOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setOpen(false);
+    };
+
     return (
         <section className="asset-card">
-            <img src={props.src} alt={props.name} />
+            <button className="asset-image" aria-label="View larger picture" onClick={openLightbox}>
+                <img src={props.src} alt={props.name} />
+                <span className="zoom-hint">View larger</span>
+            </button>
             <div className="asset-body">
                 <div className="asset-header">
                     <h3>{props.name}</h3>
@@ -22,6 +38,12 @@ const AssetCard = (props) => {
                     </div>
                 </div>
             </div>
+
+            <Lightbox
+                open={open}
+                close={closeLightbox}
+                slides={[{src: props.src}]}
+                render={{buttonPrev: () => null, buttonNext: () => null}} />
         </section>
     );
 };

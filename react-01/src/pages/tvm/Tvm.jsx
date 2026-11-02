@@ -114,6 +114,24 @@ const Tvm = () => {
                         </div>
                     </div>
                 </section>
+
+                <section className="content-block">
+                    <SectionTitle number="4" title="Watch It Explained" />
+
+                    <div className="video-grid">
+                        <div className="video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/733mgqrzNKs"
+                                title="Time value of money explained"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen></iframe>
+                        </div>
+                        <div className="video-text">
+                            <p>Prefer to see it worked out? Khan Academy walks through why money today is worth more than money later, using the same present value idea from the formulas above.</p>
+                            <p>Try pausing the video and working out each example yourself with the formulas.</p>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <ModuleNav

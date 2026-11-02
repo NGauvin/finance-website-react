@@ -76,7 +76,30 @@
     margin-top: 1.5rem;
 }
 
+#tvm .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#tvm .video-frame iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+#tvm .video-text p:last-child {
+    margin-bottom: 0;
+}
+
 @media only screen and (min-width: 768px) {
+    #tvm .video-grid {
+        grid-template-columns: 3fr 2fr;
+    }
+
     #tvm .chart-box {
         padding: 1.75rem;
     }

@@ -14,6 +14,29 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.asset-card .asset-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+}
+
+.asset-card .zoom-hint {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    background-color: rgba(15, 23, 42, 0.6);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
 .asset-card img {
     display: block;
     width: 100%;
