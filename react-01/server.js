@@ -89,10 +89,6 @@ let assets = [
     }
 ];
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-
 app.get("/api/assets", (req, res) => {
     res.send(assets);
 });
