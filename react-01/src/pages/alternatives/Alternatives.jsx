@@ -1,12 +1,6 @@
 import "./Alternatives.css";
-import realEstate from "./images/real-estate.jpg";
-import commodities from "./images/commodities.jpg";
-import privateEquity from "./images/private-equity.jpg";
-import hedgeFunds from "./images/hedge-funds.jpg";
-import digitalAssets from "./images/digital-assets.jpg";
-import privateCredit from "./images/private-credit.jpg";
-import infrastructure from "./images/infrastructure.jpg";
-import collectibles from "./images/collectibles-art.jpg";
+import {useState, useEffect} from "react";
+import axios from "axios";
 import PageHero from "../../components/page-hero/PageHero";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import CorrelationRow from "../../components/correlation-row/CorrelationRow";
@@ -16,6 +10,18 @@ import StatItem from "../../components/stat-item/StatItem";
 import ModuleNav from "../../components/module-nav/ModuleNav";
 
 const Alternatives = () => {
+    const [assets, setAssets] = useState([]);
+
+    //after the page has loaded
+    useEffect(()=>{
+        const loadAssets = async()=>{
+            const response = await axios.get("https://finance-website-server.onrender.com/api/assets");
+            setAssets(response.data);
+        };
+
+        loadAssets();
+    },[]);
+
     return (
         <div id="alternatives" className="page">
             <PageHero
@@ -68,71 +74,20 @@ const Alternatives = () => {
 
                     <Slideshow />
 
+                    {assets.length === 0 ? (<p className="loading">Loading asset classes from the server. This can take up to a minute...</p>) : ("")}
+
                     <div className="asset-grid">
-                        <AssetCard
-                            name="Real Estate"
-                            src={realEstate}
-                            category="Real Assets"
-                            risk="Moderate"
-                            typicalReturn="6-10%"
-                            liquidity="Low"
-                            description="Physical property such as residential, commercial, and industrial buildings. Returns come from rental income and price appreciation." />
-                        <AssetCard
-                            name="Commodities"
-                            src={commodities}
-                            category="Raw Assets"
-                            risk="High"
-                            typicalReturn="3-8%"
-                            liquidity="High"
-                            description="Raw materials like oil, gold, and agricultural products. Prices are driven by supply, demand, and the broader economy." />
-                        <AssetCard
-                            name="Private Equity"
-                            src={privateEquity}
-                            category="Private Markets"
-                            risk="High"
-                            typicalReturn="12-18%"
-                            liquidity="Very Low"
-                            description="Investment in private companies. Higher return potential than public markets, but capital is often locked up for 10 years or more." />
-                        <AssetCard
-                            name="Hedge Funds"
-                            src={hedgeFunds}
-                            category="Alternative Strategy"
-                            risk="Variable"
-                            typicalReturn="6-12%"
-                            liquidity="Low"
-                            description="Pooled funds that use strategies like long/short, arbitrage, and global macro to try to earn returns in any market." />
-                        <AssetCard
-                            name="Digital Assets"
-                            src={digitalAssets}
-                            category="Cryptocurrency"
-                            risk="Very High"
-                            typicalReturn="Highly Variable"
-                            liquidity="High"
-                            description="Decentralized digital currencies and tokens. Prices are volatile and speculative, and the rules around them are still changing." />
-                        <AssetCard
-                            name="Private Credit"
-                            src={privateCredit}
-                            category="Direct Lending"
-                            risk="Moderate"
-                            typicalReturn="8-12%"
-                            liquidity="Very Low"
-                            description="Loans made directly to companies by lenders that are not banks. They often pay higher yields than public bonds in exchange for less liquidity." />
-                        <AssetCard
-                            name="Infrastructure"
-                            src={infrastructure}
-                            category="Real Assets"
-                            risk="Low to Moderate"
-                            typicalReturn="5-9%"
-                            liquidity="Low"
-                            description="Essential assets like toll roads, utilities, pipelines, and airports. Revenue is often set by contracts or regulation and tends to rise with inflation." />
-                        <AssetCard
-                            name="Collectibles & Art"
-                            src={collectibles}
-                            category="Passion Assets"
-                            risk="High"
-                            typicalReturn="Highly Variable"
-                            liquidity="Very Low"
-                            description="Fine art, rare wine, classic cars, and other collectibles. They produce no income, so returns depend on what a buyer will pay later." />
+                        {assets.map((asset)=>(
+                            <AssetCard
+                                key={asset._id}
+                                name={asset.name}
+                                src={asset.img_name}
+                                category={asset.category}
+                                risk={asset.risk}
+                                typicalReturn={asset.typical_return}
+                                liquidity={asset.liquidity}
+                                description={asset.description} />
+                        ))}
                     </div>
                 </section>
 

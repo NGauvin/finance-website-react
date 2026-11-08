@@ -14,10 +14,12 @@ const AssetCard = (props) => {
         setOpen(false);
     };
 
+    const imageUrl = `https://finance-website-server.onrender.com/images/${props.src}`;
+
     return (
         <section className="asset-card">
             <button className="asset-image" aria-label="View larger picture" onClick={openLightbox}>
-                <img src={props.src} alt={props.name} />
+                <img src={imageUrl} alt={props.name} />
                 <span className="zoom-hint">View larger</span>
             </button>
             <div className="asset-body">
@@ -42,7 +44,7 @@ const AssetCard = (props) => {
             <Lightbox
                 open={open}
                 close={closeLightbox}
-                slides={[{src: props.src}]}
+                slides={[{src: imageUrl}]}
                 render={{buttonPrev: () => null, buttonNext: () => null}} />
         </section>
     );
