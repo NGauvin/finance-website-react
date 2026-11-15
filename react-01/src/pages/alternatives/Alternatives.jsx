@@ -6,17 +6,24 @@ import PageHero from "../../components/page-hero/PageHero";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import CorrelationRow from "../../components/correlation-row/CorrelationRow";
 import AssetCard from "../../components/asset-card/AssetCard";
+import AddAsset from "../../components/add-asset/AddAsset";
 import Slideshow from "../../components/slideshow/Slideshow";
 import StatItem from "../../components/stat-item/StatItem";
 import ModuleNav from "../../components/module-nav/ModuleNav";
 
 const Alternatives = () => {
     const [assets, setAssets] = useState([]);
+    const [pending, setPending] = useState(true);
+
+    const addAssetToList = (asset) => {
+        setAssets((assets)=>[...assets, asset]);
+    };
 
     //after the page has loaded
     useEffect(()=>{
         const loadAssets = async()=>{
             const response = await axios.get(`${API_BASE_URL}/api/assets`);
+            setPending(false);
             setAssets(response.data);
         };
 
@@ -75,7 +82,7 @@ const Alternatives = () => {
 
                     <Slideshow />
 
-                    {assets.length === 0 ? (<p className="loading">Loading asset classes from the server. This can take up to a minute...</p>) : ("")}
+                    {pending && <p className="loading">Loading asset classes from the server. This can take up to a minute...</p>}
 
                     <div className="asset-grid">
                         {assets.map((asset)=>(
@@ -90,6 +97,8 @@ const Alternatives = () => {
                                 description={asset.description} />
                         ))}
                     </div>
+
+                    <AddAsset add_asset_to_list={addAssetToList} />
                 </section>
 
                 <section className="content-block">
