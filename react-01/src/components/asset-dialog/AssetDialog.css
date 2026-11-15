@@ -1,0 +1,102 @@
+.asset-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(15, 23, 42, 0.6);
+}
+
+.asset-dialog .dialog-box {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--bg-card-light);
+    border-top: 4px solid var(--accent-gold);
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.asset-dialog img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.asset-dialog .dialog-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(15, 23, 42, 0.6);
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.asset-dialog .dialog-body {
+    padding: 1.5rem;
+}
+
+.asset-dialog .dialog-category {
+    color: var(--accent-tag-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.asset-dialog h2 {
+    color: var(--text-dark-main);
+    font-size: 1.75rem;
+    margin: 0.25rem 0 0.75rem;
+}
+
+.asset-dialog p {
+    color: var(--text-dark-muted);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+}
+
+.asset-dialog .dialog-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.asset-dialog .stat-value {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.asset-dialog .btn {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+@media only screen and (min-width: 768px) {
+    .asset-dialog .dialog-body {
+        padding: 2rem;
+    }
+
+    .asset-dialog .dialog-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

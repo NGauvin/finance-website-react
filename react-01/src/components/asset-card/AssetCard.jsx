@@ -1,52 +1,56 @@
 import "./AssetCard.css";
 import {useState} from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import { API_BASE_URL } from "../../config";
+import AssetDialog from "../asset-dialog/AssetDialog";
 
 const AssetCard = (props) => {
-    const [open, setOpen] = useState(false);
+    const [showDialog, setShowDialog] = useState(false);
 
-    const openLightbox = () => {
-        setOpen(true);
+    const showDetails = () => {
+        setShowDialog(true);
     };
 
-    const closeLightbox = () => {
-        setOpen(false);
+    const hideDetails = () => {
+        setShowDialog(false);
     };
-
-    const imageUrl = `https://finance-website-server.onrender.com/images/${props.src}`;
 
     return (
-        <section className="asset-card">
-            <button className="asset-image" aria-label="View larger picture" onClick={openLightbox}>
-                <img src={imageUrl} alt={props.name} />
-                <span className="zoom-hint">View larger</span>
-            </button>
-            <div className="asset-body">
-                <div className="asset-header">
-                    <h3>{props.name}</h3>
-                    <span className="asset-risk">{props.risk} Risk</span>
+        <>
+            <section className="asset-card" onClick={showDetails}>
+                <div className="asset-image">
+                    <img src={`${API_BASE_URL}/images/${props.img_name}`} alt={props.name} />
+                    <span className="zoom-hint">View details</span>
                 </div>
-                <span className="asset-category">{props.category}</span>
-                <p>{props.description}</p>
-                <div className="asset-footer">
-                    <div>
-                        <span className="asset-label">Typical Return</span>
-                        <span className="asset-value">{props.typicalReturn}</span>
+                <div className="asset-body">
+                    <div className="asset-header">
+                        <h3>{props.name}</h3>
+                        <span className="asset-risk">{props.risk} Risk</span>
                     </div>
-                    <div>
-                        <span className="asset-label">Liquidity</span>
-                        <span className="asset-value">{props.liquidity}</span>
+                    <span className="asset-category">{props.category}</span>
+                    <p>{props.description}</p>
+                    <div className="asset-footer">
+                        <div>
+                            <span className="asset-label">Typical Return</span>
+                            <span className="asset-value">{props.typicalReturn}</span>
+                        </div>
+                        <div>
+                            <span className="asset-label">Liquidity</span>
+                            <span className="asset-value">{props.liquidity}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <Lightbox
-                open={open}
-                close={closeLightbox}
-                slides={[{src: imageUrl}]}
-                render={{buttonPrev: () => null, buttonNext: () => null}} />
-        </section>
+            {showDialog && <AssetDialog
+                    name={props.name}
+                    img_name={props.img_name}
+                    category={props.category}
+                    risk={props.risk}
+                    typicalReturn={props.typicalReturn}
+                    liquidity={props.liquidity}
+                    description={props.description}
+                    close_dialog={hideDetails} />}
+        </>
     );
 };
 

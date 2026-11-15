@@ -1,6 +1,7 @@
 import "./Alternatives.css";
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../config";
 import PageHero from "../../components/page-hero/PageHero";
 import SectionTitle from "../../components/section-title/SectionTitle";
 import CorrelationRow from "../../components/correlation-row/CorrelationRow";
@@ -15,7 +16,7 @@ const Alternatives = () => {
     //after the page has loaded
     useEffect(()=>{
         const loadAssets = async()=>{
-            const response = await axios.get("https://finance-website-server.onrender.com/api/assets");
+            const response = await axios.get(`${API_BASE_URL}/api/assets`);
             setAssets(response.data);
         };
 
@@ -81,7 +82,7 @@ const Alternatives = () => {
                             <AssetCard
                                 key={asset._id}
                                 name={asset.name}
-                                src={asset.img_name}
+                                img_name={asset.img_name}
                                 category={asset.category}
                                 risk={asset.risk}
                                 typicalReturn={asset.typical_return}
