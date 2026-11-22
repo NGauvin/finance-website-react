@@ -1,0 +1,87 @@
+.edit-dialog {
+    padding: 1.5rem;
+}
+
+.edit-dialog h2 {
+    padding-right: 2.5rem;
+}
+
+.edit-dialog .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.25rem;
+}
+
+.edit-dialog form p {
+    margin: 0 0 1rem;
+}
+
+.edit-dialog label {
+    display: block;
+    color: var(--text-dark-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.edit-dialog input,
+.edit-dialog select,
+.edit-dialog textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: var(--text-dark-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+
+.edit-dialog input[type="file"] {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.edit-dialog textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.edit-dialog input:focus,
+.edit-dialog select:focus,
+.edit-dialog textarea:focus {
+    outline: none;
+    border-color: var(--accent-tag-text);
+}
+
+.edit-dialog .img-preview {
+    display: block;
+    width: 160px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 0 1rem;
+}
+
+.edit-dialog .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edit-dialog .form-actions .result {
+    color: var(--accent-tag-text);
+    font-weight: 600;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .edit-dialog {
+        padding: 2rem;
+    }
+
+    .edit-dialog .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

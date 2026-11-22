@@ -19,6 +19,10 @@ const Alternatives = () => {
         setAssets((assets)=>[...assets, asset]);
     };
 
+    const updateAssetInList = (updatedAsset) => {
+        setAssets((assets)=>assets.map((asset)=>(asset._id === updatedAsset._id ? updatedAsset : asset)));
+    };
+
     //after the page has loaded
     useEffect(()=>{
         const loadAssets = async()=>{
@@ -88,13 +92,15 @@ const Alternatives = () => {
                         {assets.map((asset)=>(
                             <AssetCard
                                 key={asset._id}
+                                _id={asset._id}
                                 name={asset.name}
                                 img_name={asset.img_name}
                                 category={asset.category}
                                 risk={asset.risk}
                                 typicalReturn={asset.typical_return}
                                 liquidity={asset.liquidity}
-                                description={asset.description} />
+                                description={asset.description}
+                                update_asset={updateAssetInList} />
                         ))}
                     </div>
 

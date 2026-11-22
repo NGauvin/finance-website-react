@@ -1,49 +1,48 @@
 import "./AssetDialog.css";
 import {useState} from "react";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import { API_BASE_URL } from "../../config";
-import StatItem from "../stat-item/StatItem";
+import DetailsDialog from "./details-dialog/DetailsDialog";
+import EditDialog from "./edit-dialog/EditDialog";
 
 const AssetDialog = (props) => {
-    const [open, setOpen] = useState(false);
+    const [showContent, setShowContent] = useState("details");
 
-    const openLightbox = () => {
-        setOpen(true);
+    const showDetails = () => {
+        setShowContent("details");
     };
 
-    const closeLightbox = () => {
-        setOpen(false);
+    const showEdit = () => {
+        setShowContent("edit");
     };
-
-    const imageUrl = `${API_BASE_URL}/images/${props.img_name}`;
 
     return (
         <div className="asset-dialog">
             <div className="dialog-box">
                 <button className="dialog-close" aria-label="Close" onClick={props.close_dialog}>&times;</button>
-                <img src={imageUrl} alt={props.name} />
 
-                <div className="dialog-body">
-                    <span className="dialog-category">{props.category}</span>
-                    <h2>{props.name}</h2>
-                    <p>{props.description}</p>
-
-                    <div className="dialog-stats">
-                        <StatItem label="Risk" value={props.risk} />
-                        <StatItem label="Typical Return" value={props.typicalReturn} />
-                        <StatItem label="Liquidity" value={props.liquidity} />
-                    </div>
-
-                    <button className="btn btn-gold" onClick={openLightbox}>View Larger Picture</button>
-                </div>
+                {showContent === "details" ? (
+                    <DetailsDialog
+                        name={props.name}
+                        img_name={props.img_name}
+                        category={props.category}
+                        risk={props.risk}
+                        typicalReturn={props.typicalReturn}
+                        liquidity={props.liquidity}
+                        description={props.description}
+                        show_edit={showEdit} />
+                ) : (
+                    <EditDialog
+                        _id={props._id}
+                        name={props.name}
+                        img_name={props.img_name}
+                        category={props.category}
+                        risk={props.risk}
+                        typicalReturn={props.typicalReturn}
+                        liquidity={props.liquidity}
+                        description={props.description}
+                        update_asset={props.update_asset}
+                        show_details={showDetails} />
+                )}
             </div>
-
-            <Lightbox
-                open={open}
-                close={closeLightbox}
-                slides={[{src: imageUrl}]}
-                render={{buttonPrev: () => null, buttonNext: () => null}} />
         </div>
     );
 };

@@ -42,6 +42,7 @@ const AssetCard = (props) => {
             </section>
 
             {showDialog && <AssetDialog
+                    _id={props._id}
                     name={props.name}
                     img_name={props.img_name}
                     category={props.category}
@@ -49,6 +50,7 @@ const AssetCard = (props) => {
                     typicalReturn={props.typicalReturn}
                     liquidity={props.liquidity}
                     description={props.description}
+                    update_asset={props.update_asset}
                     close_dialog={hideDetails} />}
         </>
     );
